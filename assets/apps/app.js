@@ -1,11 +1,25 @@
 const form = document.forms["form"]
+let totalMilk = [];
+let totalMilkProduced = 0;
+
 
 form.addEventListener('submit', function (e) {
+   
     e.preventDefault();
     const value_1 = form.querySelector('input[type="text"]').value;
     let value_2 = form.querySelector('input[type="number"]').value;
 
+    // find the total milk production per day
+    let milkValue = Number(value_2);
+    totalMilk.push(milkValue);
+    console.log(totalMilk);
     
+    totalMilk.forEach(function(item) {
+        totalMilkProduced += item; 
+       
+    });
+    console.log(totalMilkProduced)
+
     //create elements
     const cowShed = document.createElement('li');
     const milkAmount = document.createElement('li')
@@ -18,8 +32,13 @@ form.addEventListener('submit', function (e) {
     list.appendChild(cowShed);
     list_2.appendChild(milkAmount);
 
+
+
     // Clear output from the input field 
-    form.querySelector('input[type="text"]').value='';
-    form.querySelector('input[type="number"]').value='';
+    form.querySelector('input[type="text"]').value = '';
+    form.querySelector('input[type="number"]').value = '';
 });
+
+// let totalMilkProduced = 0;
+
 

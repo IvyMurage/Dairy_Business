@@ -71,7 +71,7 @@ body {
   font-weight: 300;
 }
 
-.form{
+#form{
  text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -80,10 +80,10 @@ body {
   background-color: rgb(221, 217, 217);
   
 }
-.form input{
+#form input{
   margin: 20px;
 }
-.form button{
+#form button{
   position: relative;
   right: 0;
   bottom: 0;
@@ -104,6 +104,10 @@ body {
   border: 1px solid black;
   padding-top:20px;
   justify-content: space-around;
+  margin:20px;
+  border-radius: 10px;
+  background-color: rgb(228, 225, 225);
+
 
 } 
  .list > ul > li {

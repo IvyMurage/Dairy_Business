@@ -18,10 +18,8 @@ form.addEventListener('submit', function (e) {
     list.appendChild(cowShed);
     list_2.appendChild(milkAmount);
 
+    // Clear output from the input field 
     form.querySelector('input[type="text"]').value='';
     form.querySelector('input[type="number"]').value='';
-
-
-
-
 });
+

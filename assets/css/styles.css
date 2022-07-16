@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Space+Grotesk:wght@500;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Space+Grotesk:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Space+Grotesk:wght@500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -9,11 +9,11 @@
 
 body {
   background-color: whitesmoke;
-  width: 80%;
+  width:50%;
   margin: auto;
   border: 1px solid black;
 }
-
+/* header styles-logo */
 .header {
   height: 50%;
   width: 100%;
@@ -24,6 +24,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid gray;
 }
 #logo > img {
   width: 4%;
@@ -32,4 +33,50 @@ body {
 #logo > h1 {
   color: #293190;
   font-family: Oleo Script;
+}
+/* Header styles-logo */
+
+.banner {
+
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.info-1 > h2 {
+  text-transform: capitalize;
+  color: #293190;
+  font-family: 5rem;
+  word-spacing: 1rem;
+}
+#title{
+  font-style: italic;
+}
+.image {
+  width: 90%;
+ 
+}
+.image > img {
+  max-width: 100%;
+  transform: rotate(20deg);
+  border-radius: 50%;
+
+}
+
+.form{
+ text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: 2px 2px 5px grey;
+  background-color: rgb(221, 217, 217);
+  
+}
+.form input{
+  margin: 20px;
+}
+.form button{
+  position: relative;
+  right: 0;
+  bottom: 0;
 }

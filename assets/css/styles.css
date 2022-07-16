@@ -9,13 +9,19 @@
 
 body {
   background-color: whitesmoke;
-  width:50%;
+  width:80%;
   margin: auto;
   border: 1px solid black;
 }
+
+.container-1{
+  display: flex;
+  align-items: center;
+ 
+}
 /* header styles-logo */
 .header {
-  height: 50%;
+  height: 20%;
   width: 100%;
 }
 
@@ -37,7 +43,6 @@ body {
 /* Header styles-logo */
 
 .banner {
-
   margin-top: 50px;
   display: flex;
   align-items: center;
@@ -58,9 +63,12 @@ body {
 }
 .image > img {
   max-width: 100%;
-  transform: rotate(20deg);
   border-radius: 50%;
 
+}
+
+.info-1 > p{
+  font-weight: 300;
 }
 
 .form{
@@ -79,4 +87,13 @@ body {
   position: relative;
   right: 0;
   bottom: 0;
+}
+
+#btn{
+  padding: 5px;
+  width:100px;
+  border-radius: 5px;
+  background-color: #293190;
+  color: white;
+  border-style: none;
 }

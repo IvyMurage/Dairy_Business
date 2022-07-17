@@ -167,6 +167,9 @@ body {
 
 .monthly-income{
   display: flex;
+  justify-content: space-between;
+  height: 350px;
+  border: 1px solid black;
 }
 .monthly-income ul li{
   list-style: none;

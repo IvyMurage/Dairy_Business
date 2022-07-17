@@ -104,6 +104,8 @@ form.addEventListener('submit', function (e) {
 
 
 const moneyGenerated = document.querySelector('.money-generated');
+const monthly_Time = document.querySelector('.monthly-income .month ul');
+const monthly_amount = document.querySelector('.monthly-income .amount ul');
 const moneyGeneratedWeekly = document.querySelector('.money-generated .weekly-Money-Generated');
 const moneyGeneratedMonthly = document.querySelector('.money-generated .Monthly-Money-Generated');
 const moneyGeneratedYearly = document.querySelector('.money-generated .Yearly-Money-Generated');
@@ -143,13 +145,14 @@ moneyGeneratedMonthly.addEventListener('click', function (e) {
     e.preventDefault;
     let monthly = incomeOverTimeMonthly(sellingPrice, totalMilkProducedMonthly);
     for(const property in monthly){
-        const monthlyIncome = document.createElement('li');
-        monthlyIncome.textContent =  monthly[property];
-        moneyGenerated.appendChild(monthlyIncome);
 
         const monthlyTime = document.createElement('li');
-        monthlyTime.textContent = property;
-        moneyGenerated.appendChild(monthlyTime);
+        monthlyTime.textContent =  property;
+        monthly_Time.appendChild(monthlyTime);
+
+        const monthlyIncome = document.createElement('li');
+        monthlyIncome.textContent = monthly[property];
+        monthly_amount.appendChild(monthlyIncome);
     }
     
 }, {

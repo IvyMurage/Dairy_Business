@@ -7,6 +7,8 @@ const weekReportShed = document.querySelector('.week-report-shed ul');
 let totalMilk = [];
 let sellingPrice = 45;
 var totalMilkProducedWeekly = 0;
+var totalMilkProducedYearly = 0;
+let time = 12;
 
 // div for previous week
 let milkProductionReport = {
@@ -62,7 +64,8 @@ form.addEventListener('submit', function (e) {
         totalMilkProduced += item;
     });
     totalMilkProducedWeekly = totalMilkProduced;
-    console.log(totalMilkProducedWeekly)
+    totalMilkProducedYearly = totalMilkProduced ;
+    console.log(totalMilkProducedWeekly);
 
 
     // cow object
@@ -102,21 +105,30 @@ form.addEventListener('submit', function (e) {
 const moneyGenerated = document.querySelector('.money-generated');
 const moneyGeneratedWeekly = document.querySelector('.money-generated .weekly-Money-Generated');
 const moneyGeneratedMonthly = document.querySelector('.money-generated .monthly-Money-Generated');
-const moneyGeneratedYearly = document.querySelector('.money-generated .yearly-Money-Generated');
+const moneyGeneratedYearly = document.querySelector('.money-generated .Yearly-Money-Generated');
 
 moneyGeneratedWeekly.addEventListener('click', function (e) {
     e.preventDefault;
-    let finalResult = incomeOverTime(sellingPrice, totalMilkProducedWeekly);
+    let finalResult = incomeOverTimeWeekly(sellingPrice, totalMilkProducedWeekly);
     const weeklyIncome = document.createElement('span');
-    weeklyIncome.textContent = finalResult;
+    weeklyIncome.textContent = "The weekly money generated is: " +finalResult;
     moneyGenerated.appendChild(weeklyIncome);
-}, {
-    once: true
-})
+}, {once:true});
 
-
-
-const incomeOverTime = function (sellingPrice, totalMilkProducedWeekly) {
+const incomeOverTimeWeekly = function (sellingPrice, totalMilkProducedWeekly) {
     let weeklyMoneyGenerated = totalMilkProducedWeekly * sellingPrice;
     return weeklyMoneyGenerated;
+}
+
+moneyGeneratedYearly.addEventListener('click', function (e) {
+    e.preventDefault;
+    let finalResult = incomeOverTimeYearly(sellingPrice, totalMilkProducedYearly, time);
+    const yearlyIncome = document.createElement('span');
+    yearlyIncome.textContent = "The yearly money generated is: " +finalResult;
+    moneyGenerated.appendChild(yearlyIncome);
+}, {once: true});
+
+const incomeOverTimeYearly = function (sellingPrice, totalMilkProducedYearly, time) {
+    let yearlyMoneyGenerated = totalMilkProducedYearly * sellingPrice * time;
+    return yearlyMoneyGenerated;
 }

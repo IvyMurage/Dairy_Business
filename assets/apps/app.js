@@ -3,7 +3,7 @@ let totalMilk = [];
 
 
 const milkProduced = document.createElement('span');
-const totalperday = document.querySelector('.report-1');
+const totalperday = document.querySelector('.report');
 
 form.addEventListener('submit', function (e) {
 

@@ -1,7 +1,9 @@
 const form = document.forms["form"];
 const btn = document.querySelector('.info-1 .week');
 const info = document.querySelector('.info-1');
-const weekReport = document.querySelector('.week-report ul');
+const weekReportMilk = document.querySelector('.week-report-milk ul');
+const weekReportShed = document.querySelector('.week-report-shed ul');
+
 let totalMilk = [];
 
 // div for previous week
@@ -17,9 +19,14 @@ let milkProductionReport = { 'Shed A': 510,
 btn.addEventListener('click', function(e){
     e.preventDefault;
     for(const property in milkProductionReport) {
-        const previousWeek = document.createElement('li');
-        previousWeek.textContent = milkProductionReport[property];
-        weekReport.appendChild(previousWeek);
+        const previousWeekShed = document.createElement('li');
+        previousWeekShed.textContent = property;
+        weekReportShed.appendChild(previousWeekShed);
+
+        const previousWeekMilk = document.createElement('li');
+        previousWeekMilk.textContent = milkProductionReport[property];
+        weekReportMilk.appendChild(previousWeekMilk);
+       
         
     }
     

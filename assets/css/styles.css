@@ -133,5 +133,22 @@ body {
 }
 
 .report-previous{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+  background-color: white;
+  padding:10px
   
+}
+
+
+
+
+
+.report-previous ul li{
+  list-style: none;
 }

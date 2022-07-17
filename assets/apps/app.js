@@ -5,11 +5,10 @@ const weekReportMilk = document.querySelector('.week-report-milk ul');
 const weekReportShed = document.querySelector('.week-report-shed ul');
 
 let totalMilk = [];
+let sellingPrice = 45;
+var totalMilkProducedWeekly = 0;
 
 // div for previous week
-
-
-
 let milkProductionReport = {
     'Shed A': 510,
     'Shed B': 308,
@@ -18,6 +17,7 @@ let milkProductionReport = {
     'Total': 1876
 };
 
+// Adding an event listener to the weekly report button
 btn.addEventListener('click', function (e) {
     e.preventDefault;
     for (const property in milkProductionReport) {
@@ -33,7 +33,7 @@ btn.addEventListener('click', function (e) {
     once: true
 });
 
-
+// styles the total milk produced span
 const milkProduced = document.createElement('span');
 const totalperday = document.querySelector('.total');
 totalperday.style.color = "white";
@@ -61,8 +61,9 @@ form.addEventListener('submit', function (e) {
     totalMilk.forEach(function (item) {
         totalMilkProduced += item;
     });
-    console.log(totalMilkProduced);
-    console.log(typeof (value_1));
+    totalMilkProducedWeekly = totalMilkProduced;
+    console.log(totalMilkProducedWeekly)
+
 
     // cow object
     milkProductionReport[value_1] = milkValue;
@@ -98,9 +99,24 @@ form.addEventListener('submit', function (e) {
 });
 
 
+const moneyGenerated = document.querySelector('.money-generated');
+const moneyGeneratedWeekly = document.querySelector('.money-generated .weekly-Money-Generated');
+const moneyGeneratedMonthly = document.querySelector('.money-generated .monthly-Money-Generated');
+const moneyGeneratedYearly = document.querySelector('.money-generated .yearly-Money-Generated');
 
-const incomeOverTime = function(sellingPrice, time){
-        
-    totalMilkProduced * sellingPrice 
+moneyGeneratedWeekly.addEventListener('click', function (e) {
+    e.preventDefault;
+    let finalResult = incomeOverTime(sellingPrice, totalMilkProducedWeekly);
+    const weeklyIncome = document.createElement('span');
+    weeklyIncome.textContent = finalResult;
+    moneyGenerated.appendChild(weeklyIncome);
+}, {
+    once: true
+})
+
+
+
+const incomeOverTime = function (sellingPrice, totalMilkProducedWeekly) {
+    let weeklyMoneyGenerated = totalMilkProducedWeekly * sellingPrice;
+    return weeklyMoneyGenerated;
 }
-

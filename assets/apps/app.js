@@ -10,15 +10,17 @@ let totalMilk = [];
 
 
 
-let milkProductionReport = { 'Shed A': 510,
-'Shed B': 308,
-'Shed C': 486,
-'Shed D': 572,
-'Total': 1876};
+let milkProductionReport = {
+    'Shed A': 510,
+    'Shed B': 308,
+    'Shed C': 486,
+    'Shed D': 572,
+    'Total': 1876
+};
 
-btn.addEventListener('click',  function(e){
+btn.addEventListener('click', function (e) {
     e.preventDefault;
-    for(const property in milkProductionReport) {
+    for (const property in milkProductionReport) {
         const previousWeekShed = document.createElement('li');
         previousWeekShed.textContent = property;
         weekReportShed.appendChild(previousWeekShed);
@@ -26,10 +28,10 @@ btn.addEventListener('click',  function(e){
         const previousWeekMilk = document.createElement('li');
         previousWeekMilk.textContent = milkProductionReport[property];
         weekReportMilk.appendChild(previousWeekMilk);
-       
-        
     }
-} ,{once:true});
+}, {
+    once: true
+});
 
 
 const milkProduced = document.createElement('span');
@@ -37,8 +39,7 @@ const totalperday = document.querySelector('.total');
 totalperday.style.color = "white";
 totalperday.style.fontWeight = "bold";
 totalperday.style.textAlign = "center";
-totalperday.style.width= "fit-content";
-totalperday.style.border = "1px solid black";
+totalperday.style.width = "fit-content";
 totalperday.style.borderRadius = "10px";
 totalperday.style.backgroundColor = "#293190";
 totalperday.style.margin = "auto";
@@ -49,7 +50,7 @@ totalperday.style.padding = "5px";
 form.addEventListener('submit', function (e) {
 
     e.preventDefault();
-    let  value_1 = form.querySelector('input[type="text"]').value;
+    let value_1 = form.querySelector('input[type="text"]').value;
     let value_2 = form.querySelector('input[type="number"]').value;
 
     // find the total milk production per day
@@ -61,11 +62,11 @@ form.addEventListener('submit', function (e) {
         totalMilkProduced += item;
     });
     console.log(totalMilkProduced);
-    console.log(typeof(value_1));
+    console.log(typeof (value_1));
 
-     // cow object
-   milkProductionReport[value_1]= milkValue ;
-   console.log(milkProductionReport);
+    // cow object
+    milkProductionReport[value_1] = milkValue;
+    console.log(milkProductionReport);
 
 
     //create elements
@@ -78,7 +79,7 @@ form.addEventListener('submit', function (e) {
     cowShed.textContent = value_1;
     milkAmount.textContent = value_2;
     milkProduced.textContent = totalMilkProduced;
-  
+
     //append to dom
     const list = document.querySelector('.list ul');
     const list_2 = document.querySelector('.list-1 ul');
@@ -93,4 +94,13 @@ form.addEventListener('submit', function (e) {
     // Clear output from the input field 
     form.querySelector('input[type="text"]').value = '';
     form.querySelector('input[type="number"]').value = '';
+
 });
+
+
+
+const incomeOverTime = function(sellingPrice, time){
+        
+    totalMilkProduced * sellingPrice 
+}
+

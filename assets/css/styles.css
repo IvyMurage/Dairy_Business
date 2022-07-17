@@ -9,15 +9,14 @@
 
 body {
   background-color: whitesmoke;
-  width:80%;
+  width: 80%;
   margin: auto;
   border: 1px solid black;
 }
 
-.container-1{
+.container-1 {
   display: flex;
   align-items: center;
- 
 }
 /* header styles-logo */
 .header {
@@ -54,44 +53,41 @@ body {
   font-family: 5rem;
   word-spacing: 1rem;
 }
-#title{
+#title {
   font-style: italic;
 }
 .image {
   width: 90%;
- 
 }
 .image > img {
   max-width: 100%;
   border-radius: 50%;
-
 }
 
-.info-1 > p{
+.info-1 > p {
   font-weight: 300;
 }
 
-#form{
- text-align: center;
+#form {
+  text-align: center;
   padding: 20px;
   border-radius: 10px;
   margin: 30px;
   box-shadow: 2px 2px 5px grey;
   background-color: rgb(221, 217, 217);
-  
 }
-#form input{
+#form input {
   margin: 20px;
 }
-#form button{
+#form button {
   position: relative;
   right: 0;
   bottom: 0;
 }
 
-#btn{
+#btn {
   padding: 5px;
-  width:100px;
+  width: 100px;
   border-radius: 5px;
   background-color: #293190;
   color: white;
@@ -100,17 +96,20 @@ body {
 
 .report-1 {
   display: flex;
-  height:200px;
+  height: 200px;
   border: 1px solid black;
-  padding-top:20px;
+  padding-top: 20px;
   justify-content: space-around;
-  margin:20px;
+  margin: 20px;
   border-radius: 10px;
   background-color: rgb(228, 225, 225);
+}
 
-
-} 
- .list > ul > li {
+.report h3{
+  margin: 20px;
+  color: #293190;
+}
+.list > ul > li {
   list-style: none;
 }
 
@@ -132,7 +131,7 @@ body {
   padding: 0 10px 0 10px;
 }
 
-.report-previous{
+.report-previous {
   display: flex;
   justify-content: space-between;
   margin: 30px;
@@ -141,14 +140,27 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 5px gray;
   background-color: white;
-  padding:10px
-  
+  padding: 10px;
+}
+
+.report-previous ul li {
+  list-style: none;
 }
 
 
+.money-generated{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
 
-
-
-.report-previous ul li{
-  list-style: none;
+.money-generated button{
+  border-radius: 5px;
+  border-style: none;
+  background-color: #293190;
+  color: white;
+  padding: 10px;
 }

@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <form>
+
+    </form>
     <div class="container">
         <header id="banner">
             <div id="logo">
@@ -30,6 +33,16 @@
                         and
                         track the total earnings you make from selling milk with Wajeff
                     </p>
+                    <button class="week">Weekly report</button>
+                    <div class="report-previous">
+                        <div class="week-report-shed">
+                            <ul></ul>
+                        </div>
+                        <div class="week-report-milk">
+                            <ul></ul>
+                        </div>
+                    </div>
+       
                 </div>
 
                 <div class="image">
@@ -39,11 +52,15 @@
             <div class="cards">
                 <div class="card">
                     <form id="form">
+                        <label for="cow-shed">Week Number:</label>
+                        <input type="number" name="cow-shed" id="cow-shed" placeholder="Enter week number:" required>
+                        <br>
                         <label for="cow-shed">Cow shed Label:</label>
                         <input type="text" name="cow-shed" id="cow-shed" placeholder="Enter cow shed label"><br>
                         <label for="cow-shed">Milk Produced:</label>
                         <input type="number" name="cow-shed" id="cow-shed" placeholder="Enter milk produced" required>
                         <br>
+                        
                         <button id="btn" type="submit">Submit</button>
                     </form>
                 </div>
@@ -55,15 +72,13 @@
             <div class="report-1">
                 <div class="list">
                     <ul>
-                        <li>Shed A</li>
+
                     </ul>
                 </div>
                 <div class="list-1">
                     <ul>
-                        <li>34</li>
                     </ul>
                 </div>
-               
 
             </div>
             <div class="total">

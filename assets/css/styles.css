@@ -117,3 +117,21 @@ body {
 .list-1 > ul > li {
   list-style: none;
 }
+
+.week {
+  border-radius: 5px;
+  background-color: #293190;
+  color: white;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  border-style: none;
+  margin-left: 30px;
+  font-weight: bold;
+  margin-top: 50px;
+  padding: 0 10px 0 10px;
+}
+
+.report-previous{
+  
+}

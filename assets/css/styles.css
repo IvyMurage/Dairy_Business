@@ -164,3 +164,10 @@ body {
   color: white;
   padding: 10px;
 }
+
+.monthly-income{
+  display: flex;
+}
+.monthly-income ul li{
+  list-style: none;
+}

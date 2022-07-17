@@ -8,6 +8,7 @@ let totalMilk = [];
 let sellingPrice = 45;
 var totalMilkProducedWeekly = 0;
 var totalMilkProducedYearly = 0;
+var totalMilkProducedMonthly = 0;
 let time = 12;
 
 // div for previous week
@@ -64,8 +65,8 @@ form.addEventListener('submit', function (e) {
         totalMilkProduced += item;
     });
     totalMilkProducedWeekly = totalMilkProduced;
-    totalMilkProducedYearly = totalMilkProduced ;
-    console.log(totalMilkProducedWeekly);
+    totalMilkProducedYearly = totalMilkProduced;
+    totalMilkProducedMonthly = totalMilkProduced
 
 
     // cow object
@@ -104,31 +105,72 @@ form.addEventListener('submit', function (e) {
 
 const moneyGenerated = document.querySelector('.money-generated');
 const moneyGeneratedWeekly = document.querySelector('.money-generated .weekly-Money-Generated');
-const moneyGeneratedMonthly = document.querySelector('.money-generated .monthly-Money-Generated');
+const moneyGeneratedMonthly = document.querySelector('.money-generated .Monthly-Money-Generated');
 const moneyGeneratedYearly = document.querySelector('.money-generated .Yearly-Money-Generated');
-
+// Money gerenarated weekly
 moneyGeneratedWeekly.addEventListener('click', function (e) {
     e.preventDefault;
     let finalResult = incomeOverTimeWeekly(sellingPrice, totalMilkProducedWeekly);
     const weeklyIncome = document.createElement('span');
-    weeklyIncome.textContent = "The weekly money generated is: " +finalResult;
+    weeklyIncome.textContent = "The weekly money generated is: " + finalResult;
     moneyGenerated.appendChild(weeklyIncome);
-}, {once:true});
-
+}, {
+    once: true
+});
+// function to calculate money generated weekly
 const incomeOverTimeWeekly = function (sellingPrice, totalMilkProducedWeekly) {
     let weeklyMoneyGenerated = totalMilkProducedWeekly * sellingPrice;
     return weeklyMoneyGenerated;
 }
-
+// Money generated yearly
 moneyGeneratedYearly.addEventListener('click', function (e) {
     e.preventDefault;
     let finalResult = incomeOverTimeYearly(sellingPrice, totalMilkProducedYearly, time);
     const yearlyIncome = document.createElement('span');
-    yearlyIncome.textContent = "The yearly money generated is: " +finalResult;
+    yearlyIncome.textContent = "The yearly money generated is: " + finalResult;
     moneyGenerated.appendChild(yearlyIncome);
-}, {once: true});
-
+}, {
+    once: true
+});
+// function to calculate money generated yearly
 const incomeOverTimeYearly = function (sellingPrice, totalMilkProducedYearly, time) {
     let yearlyMoneyGenerated = totalMilkProducedYearly * sellingPrice * time;
     return yearlyMoneyGenerated;
+}
+
+
+moneyGeneratedMonthly.addEventListener('click', function (e) {
+    e.preventDefault;
+    let monthly = incomeOverTimeMonthly(sellingPrice, totalMilkProducedMonthly);
+    for(const property in monthly){
+        const monthlyIncome = document.createElement('li');
+        monthlyIncome.textContent =  monthly[property];
+        moneyGenerated.appendChild(monthlyIncome);
+
+        const monthlyTime = document.createElement('li');
+        monthlyTime.textContent = property;
+        moneyGenerated.appendChild(monthlyTime);
+    }
+    
+}, {
+    once: true
+});
+
+const incomeOverTimeMonthly = function (sellingPrice, totalMilkProducedMonthly) {
+    monthly = {
+        'January': sellingPrice * totalMilkProducedMonthly * 31,
+        'February': sellingPrice * totalMilkProducedMonthly * 29,
+        'March': sellingPrice * totalMilkProducedMonthly * 31,
+        'April': sellingPrice * totalMilkProducedMonthly * 30,
+        'May': sellingPrice * totalMilkProducedMonthly * 31,
+        'June': sellingPrice * totalMilkProducedMonthly * 30,
+        'July': sellingPrice * totalMilkProducedMonthly * 31,
+        'August': sellingPrice * totalMilkProducedMonthly * 31,
+        'September': sellingPrice * totalMilkProducedMonthly * 30,
+        'October': sellingPrice * totalMilkProducedMonthly * 31,
+        'November': sellingPrice * totalMilkProducedMonthly * 30,
+        'December': sellingPrice * totalMilkProducedMonthly * 31,
+
+    }
+   return monthly
 }

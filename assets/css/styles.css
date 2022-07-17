@@ -105,7 +105,7 @@ body {
   background-color: rgb(228, 225, 225);
 }
 
-.report h3{
+.report h3 {
   margin: 20px;
   color: #293190;
 }
@@ -147,17 +147,15 @@ body {
   list-style: none;
 }
 
-
-.money-generated{
+.money-generated {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   padding: 10px;
-  
 }
 
-.money-generated button{
+.money-generated button {
   border-radius: 5px;
   border-style: none;
   background-color: #293190;
@@ -165,12 +163,12 @@ body {
   padding: 10px;
 }
 
-.monthly-income{
+.monthly-income {
   display: flex;
   justify-content: space-between;
   height: 350px;
   border: 1px solid black;
 }
-.monthly-income ul li{
+.monthly-income ul li {
   list-style: none;
 }

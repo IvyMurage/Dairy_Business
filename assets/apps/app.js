@@ -144,17 +144,17 @@ const incomeOverTimeYearly = function (sellingPrice, totalMilkProducedYearly, ti
 moneyGeneratedMonthly.addEventListener('click', function (e) {
     e.preventDefault;
     let monthly = incomeOverTimeMonthly(sellingPrice, totalMilkProducedMonthly);
-    for(const property in monthly){
+    for (const property in monthly) {
 
         const monthlyTime = document.createElement('li');
-        monthlyTime.textContent =  property;
+        monthlyTime.textContent = property;
         monthly_Time.appendChild(monthlyTime);
 
         const monthlyIncome = document.createElement('li');
         monthlyIncome.textContent = monthly[property];
         monthly_amount.appendChild(monthlyIncome);
     }
-    
+
 }, {
     once: true
 });
@@ -175,5 +175,5 @@ const incomeOverTimeMonthly = function (sellingPrice, totalMilkProducedMonthly) 
         'December': sellingPrice * totalMilkProducedMonthly * 31,
 
     }
-   return monthly
+    return monthly
 }

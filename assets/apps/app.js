@@ -3,7 +3,18 @@ let totalMilk = [];
 
 
 const milkProduced = document.createElement('span');
-const totalperday = document.querySelector('.report');
+const totalperday = document.querySelector('.total');
+totalperday.style.color = "white"
+totalperday.style.fontWeight = "bold"
+totalperday.style.textAlign = "center"
+totalperday.style.width= "fit-content"
+totalperday.style.border = "1px solid black"
+totalperday.style.borderRadius = "10px"
+totalperday.style.backgroundColor = "#293190"
+totalperday.style.margin = "auto"
+totalperday.style.padding = "5px"
+
+
 
 form.addEventListener('submit', function (e) {
 
@@ -25,18 +36,18 @@ form.addEventListener('submit', function (e) {
     //create elements
     const cowShed = document.createElement('li');
     const milkAmount = document.createElement('li');
-    
+
 
 
     //Add content to the element
     cowShed.textContent = value_1;
     milkAmount.textContent = value_2;
     milkProduced.textContent = totalMilkProduced;
-
+   
     //append to dom
     const list = document.querySelector('.list ul');
     const list_2 = document.querySelector('.list-1 ul');
-    
+
 
     list.appendChild(cowShed);
     list_2.appendChild(milkAmount);
@@ -48,5 +59,3 @@ form.addEventListener('submit', function (e) {
     form.querySelector('input[type="text"]').value = '';
     form.querySelector('input[type="number"]').value = '';
 });
-
-// let totalMilkProduced = 0;

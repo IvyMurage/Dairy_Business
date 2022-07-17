@@ -16,7 +16,7 @@ let milkProductionReport = { 'Shed A': 510,
 'Shed D': 572,
 'Total': 1876};
 
-btn.addEventListener('click', function(e){
+btn.addEventListener('click',  function(e){
     e.preventDefault;
     for(const property in milkProductionReport) {
         const previousWeekShed = document.createElement('li');
@@ -31,7 +31,7 @@ btn.addEventListener('click', function(e){
     }
     
     
-});
+} ,{once:true});
 
 
 const milkProduced = document.createElement('span');

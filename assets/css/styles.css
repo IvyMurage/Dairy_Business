@@ -7,14 +7,12 @@
   font-family: "Inter", sans-serif;
   list-style: none;
 }
+
+body,
 html {
-  background-color: white;
-}
-body {
   background-color: #212c44;
   width: 100%;
   margin: auto;
-  border: 1px solid black;
 }
 
 .container-1 {
@@ -201,86 +199,50 @@ td {
   padding: 10px 10px 10px 10px;
   color: #abc75a;
 }
-.display-div{
+.display-div {
   display: none;
 }
 /* Display section */
 
-.report-1 {
-  display: flex;
+.reports {
   height: 200px;
-  border: 1px solid black;
   padding-top: 20px;
-  justify-content: space-around;
   margin: 20px;
   border-radius: 10px;
   background-color: rgb(228, 225, 225);
+  margin-bottom: 30px;
+  position: relative;
 }
 
-.report h3 {
-  margin: 20px;
-  color: #293190;
-}
-.list > ul > li {
-  list-style: none;
-}
-
-.list-1 > ul > li {
-  list-style: none;
-}
-
-.week {
-  border-radius: 5px;
-  background-color: #293190;
+.report > h3 {
   color: white;
+  border: 2px solid #212c44;
+  padding:15px 10px 15px 10px;
   text-align: center;
-  width: 100px;
-  height: 40px;
-  border-style: none;
-  margin-left: 30px;
-  font-weight: bold;
-  margin-top: 50px;
-  padding: 0 10px 0 10px;
-}
-
-.report-previous {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px;
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: #abc75a;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px gray;
-  background-color: white;
-  padding: 10px;
-}
-
-.report-previous ul li {
-  list-style: none;
 }
 
 .money-generated {
   display: flex;
-  flex-direction: column;
   text-align: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .money-generated button {
   border-radius: 5px;
   border-style: none;
-  background-color: #293190;
-  color: white;
+  background-color: #abc75a;
+  color: black;
   padding: 10px;
-}
-
-.monthly-income {
-  display: flex;
-  justify-content: space-between;
-  height: 350px;
-  border: 1px solid black;
-}
-.monthly-income ul li {
-  list-style: none;
 }

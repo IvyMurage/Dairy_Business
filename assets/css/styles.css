@@ -1,22 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Space+Grotesk:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Space+Grotesk:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: poppins;
+  font-family: "Inter", sans-serif;
+  list-style: none;
 }
-
+html {
+  background-color: white;
+}
 body {
-  background-color: whitesmoke;
-  width: 80%;
+  background-color: #212c44;
+  width: 100%;
   margin: auto;
   border: 1px solid black;
 }
 
 .container-1 {
-  display: flex;
-  align-items: center;
+  position: relative;
+  height: 100vh;
 }
 /* header styles-logo */
 .header {
@@ -39,22 +42,72 @@ body {
   color: #293190;
   font-family: Oleo Script;
 }
+
+#nav-bar ul li a {
+  display: block;
+}
+#nav-bar ul li {
+  display: inline-block;
+}
 /* Header styles-logo */
 
 .banner {
   margin-top: 50px;
-  display: flex;
-  align-items: center;
+  width: 100%;
+}
+.info-1 {
+  position: relative;
+  height: 80vh;
+  line-height: 2;
+}
+.container-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/assets/images/alpine-mountain-cow-france-spring.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.1;
+  z-index: 1000;
 }
 
 .info-1 > h2 {
+  position: absolute;
   text-transform: capitalize;
-  color: #293190;
-  font-family: 5rem;
-  word-spacing: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  top: 30%;
+  width: 100%;
+  margin-bottom: 20px;
 }
-#title {
-  font-style: italic;
+.info-1 > p {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  top: 40%;
+}
+.info-1 > #btn {
+  border-radius: 20px;
+  height: 50px;
+  width: 200px;
+  background-color: #abc75a;
+  top: 50%;
+
+  margin-top: 30px;
+}
+.info-1 p,
+#btn,
+h2 {
+  left: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .image {
   width: 90%;
@@ -69,15 +122,52 @@ body {
 }
 
 #form {
-  text-align: center;
   padding: 20px;
   border-radius: 10px;
   margin: 30px;
   box-shadow: 2px 2px 5px grey;
   background-color: rgb(221, 217, 217);
+  position: relative;
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.inputs {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 20px;
+  top: 30%;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-40%);
+  transform: translateX(-50%);
+}
+
+input[type="number"] {
+  border-style: none;
+  padding: 5px 10px 5px 10px;
+}
+label {
+  text-align: center;
+}
+
+#submit-btn {
+  padding: 5px 5px 5px 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  border-radius: 20px;
+  height: 50px;
+  width: 150px;
+  background-color: #abc75a;
+  border-style: none;
 }
 #form input {
-  margin: 20px;
+  margin: 5px;
 }
 #form button {
   position: relative;
@@ -93,6 +183,28 @@ body {
   color: white;
   border-style: none;
 }
+
+/* display section */
+.display-div {
+  margin: 30px;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
+table th,
+td {
+  border: 3px solid white;
+  padding: 10px 10px 10px 10px;
+  color: #abc75a;
+}
+.display-div{
+  display: none;
+}
+/* Display section */
 
 .report-1 {
   display: flex;

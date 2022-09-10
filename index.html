@@ -16,53 +16,87 @@
 
     </form>
     <div class="container">
-        <header id="banner">
-            <div id="logo">
-                <img src="./assets/images/Farmer.jpg" alt="farmer">
-                <h1>Wajeff Diary Management System</h1>
-            </div>
-
-
-        </header>
-
         <div class="container-1">
+            <header id="banner">
+                <div class="logo">
+
+                </div>
+                <nav id="nav-bar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#form">Calculator</a></li>
+                        <li><a href="#report">Reports</a></li>
+                    </ul>
+                </nav>
+            </header>
+
             <div class="banner">
                 <div class="info-1">
-                    <h2>Welcome to <span id="title">Wajeff's</span> Diary </h2>
-                    <p>Keep track of the amount of milk your cows produce daily
+                    <h2>Welcome to WaJeff's Diary </h2>
+                    <p>Keep track of the amount of milk your cows produce daily <br>
                         and
                         track the total earnings you make from selling milk with Wajeff
                     </p>
-                    <button class="week">Weekly report</button>
 
-                    <div class="report-previous">
+                    <button id="btn">View More</button>
+                </div>
+            </div>
 
-                        <div class="week-report-shed">
-                            <ul></ul>
-                        </div>
-                        <div class="week-report-milk">
-                            <ul></ul>
-                        </div>
+        </div>
+
+        <div class="card">
+            <form id="form">
+                <div class="inputs">
+                    <div class="shed-a">
+                        <label for="cow-shed">Cow shed A</label>
+                        <br>
+                        <input type="number" name="cow-shed" class="cow-shed" placeholder="Enter milk produced" required>
                     </div>
 
-                </div>
-
-                <div class="image">
-                    <img src="./assets/images/istockphoto-1059675954-612x612.jpg" alt="cow">
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <form id="form">
-                        <label for="cow-shed">Cow shed Label:</label>
-                        <input type="text" name="cow-shed" id="cow-shed" placeholder="Enter cow shed label"><br>
-                        <label for="cow-shed">Milk Produced:</label>
-                        <input type="number" name="cow-shed" id="cow-shed" placeholder="Enter milk produced" required>
+                    <!-- Form input for cow shed B -->
+                    <div class="shed-b">
+                        <label for="cow-shed">Cow shed B</label>
                         <br>
-                        <button id="btn" type="submit">Submit</button>
-                    </form>
+                        <input type="number" name="cow-shed" class="cow-shed" placeholder="Enter milk produced" required>
+                    </div>
+
+                    <!-- Form input for cow shed C -->
+                    <div class="shed-c">
+                        <label for="cow-shed">Cow shed C</label>
+                        <br>
+                        <input type="number" name="cow-shed" class="cow-shed" placeholder="Enter milk produced" required>
+                    </div>
+
+                    <!-- Form input for cow shed D -->
+                    <div class="shed-d">
+                        <label for="cow-shed">Cow shed D</label>
+                        <br>
+                        <input type="number" name="cow-shed" class="cow-shed" placeholder="Enter milk produced" required>
+                    </div>
                 </div>
+                <button id="submit-btn" class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="display-div">
+            <table>
+                <tbody id="rows">
+                    <tr>
+                        <th>Cow Shed</th>
+                        <th>Milk Production </th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="report-previous">
+            <div class="week-report-shed">
+                <ul></ul>
             </div>
+            <div class="week-report-milk">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="cards">
         </div>
 
         <div class="report">
@@ -70,7 +104,6 @@
             <div class="report-1">
                 <div class="list">
                     <ul>
-
                     </ul>
                 </div>
                 <div class="list-1">
